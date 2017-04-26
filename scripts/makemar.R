@@ -1,8 +1,6 @@
 #make missings
 
-load("~/CloudStation/R projects/Functions & Programs/Missing data/Makemissing/data/costdata_complete.rda")
-
-source("~/CloudStation/R projects/Functions & Programs/Missing data/Makemissing/R/mar.R")
+load("data/costdata_complete.rda")
 
 x <- costdata_complete
 
@@ -66,7 +64,7 @@ sum(is.na(dfout[,16]))
 
 costdata_missing17 <- dfout
 
-save("costdata_missing17", file = "~/CloudStation/R projects/Functions & Programs/Missing data/Makemissing/data/costdata_missing17.rda",compress = "xz")
+save("costdata_missing17", file = "data/costdata_missing17.rda",compress = "xz")
 
 set.seed(987654)
 miss <- MAR(x=x,alpha=alpha[2], pattern=pattern, f=f,a=a,g=g,quant=quant)
@@ -90,7 +88,7 @@ sum(is.na(dfout[,16]))
 
 costdata_missing35 <- dfout
 
-save("costdata_missing35", file = "~/CloudStation/R projects/Functions & Programs/Missing data/Makemissing/data/costdata_missing35.rda",compress = "xz")
+save("costdata_missing35", file = "data/costdata_missing35.rda",compress = "xz")
 
 
 set.seed(654987)
@@ -115,4 +113,4 @@ sum(is.na(dfout[,16]))
 
 costdata_missing50 <- dfout
 
-save("costdata_missing50", file = "~/CloudStation/R projects/Functions & Programs/Missing data/Makemissing/data/costdata_missing50.rda",compress = "xz")
+save("costdata_missing50", file = "data/costdata_missing50.rda",compress = "xz")
