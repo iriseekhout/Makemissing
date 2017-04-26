@@ -5,7 +5,7 @@
 #'
 #' @param x data frame where missing observations should be generated in.
 #' @param alpha proportion of cases that will get a missing data pattern
-#' @param pattern a matrix with ncol=ncol(data), nrow=numer of missing data patterns; for each patter 0 indicates missing and 1 observed.
+#' @param pattern a matrix with ncol=ncol(data), nrow=number of missing data patterns; for each patter 0 indicates missing and 1 observed.
 #' @param f frequency of each pattern
 #' @param g the odds of the patterns to occur, the strength of the mechanism
 #'
@@ -24,7 +24,7 @@
 MAR <- function(x, alpha, pattern, f,g)
 {
   xobs <- testcand1 <- testpip <- tests <- testincompl <- testcand2 <- testresp <- fltest <- cltest<- bltest <- list()
-  a=pattern
+  a=pattern*0.8
   quant=data.matrix(c(rep(0.5,nrow(pattern))))
   g=data.matrix(c(rep(g,nrow(pattern))))
   x <- data.matrix(x)
