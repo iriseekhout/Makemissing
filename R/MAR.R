@@ -21,10 +21,9 @@
 #' g <- c(4,4)
 #' MAR(x,alpha,pattern,f,g)
 
-MAR <- function(x, alpha, pattern, f,g)
+MAR <- function(x, alpha, pattern, f,g=4, a=pattern)
 {
   xobs <- testcand1 <- testpip <- tests <- testincompl <- testcand2 <- testresp <- fltest <- cltest<- bltest <- list()
-  a=pattern*0.8
   quant=data.matrix(c(rep(0.5,nrow(pattern))))
   g=data.matrix(c(rep(g,nrow(pattern))))
   x <- data.matrix(x)
